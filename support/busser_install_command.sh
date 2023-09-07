@@ -17,6 +17,8 @@ for plugin in $plugins; do
     $gem install specific_install
     $gem specific_install https://github.com/test-kitchen/busser-serverspec.git
     $gem install 'bundler'
+    $gem install 'rspec-retry'
+    $gem install 'rspec-support'
     $gem list
     $busser plugin install $plugin || true
   elif test $? -ne 0; then
